@@ -1,7 +1,7 @@
 // ===== KONFIGURASI LINK — ganti sesuai URL asli =====
 const LINKS = {
   "absen-web": "https://lapakabsensi.github.io/lapakabsensi/",
-  "absen-apk": "#"    // contoh: "https://github.com/USERNAME/REPO/releases/latest/download/lapak-absen.apk"
+  "absen-apk": "downloads/Lapak-Absen.apk"
 };
 
 document.querySelectorAll("[data-link]").forEach(a => {
