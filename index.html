@@ -49,10 +49,7 @@
       <a href="#produk">Produk</a>
       <a href="#tentang">Tentang Kami</a>
       <a href="#bantuan">Bantuan</a>
-      <a href="#produk" class="btn btn--sm nav__cta-mobile">Mulai Sekarang</a>
     </nav>
-
-    <a href="#produk" class="btn btn--sm nav__cta">Mulai Sekarang <svg class="ic"><use href="#i-arrow"/></svg></a>
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -88,6 +85,31 @@
   <section class="products" id="produk">
     <div class="container products__grid">
 
+      <!-- Lapak Absen -->
+      <article class="card card--featured" id="absen">
+        <span class="badge badge--live">Tersedia</span>
+        <svg class="card__icon card__icon--blue" aria-hidden="true"><use href="#i-absen"/></svg>
+        <h3>LAPAK <span class="blue">ABSEN</span></h3>
+        <p>Solusi absensi dan pengelolaan karyawan.</p>
+        <ul class="checks">
+          <li><svg class="ic"><use href="#i-check"/></svg>Absensi via HP</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Face Recognition</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>GPS Maps</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Payroll</li>
+        </ul>
+        <div class="card__actions">
+          <!-- TODO: ganti # dengan URL Lapak Absen versi web & APK -->
+          <a href="#" class="btn" data-link="absen-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
+          <a href="#" class="btn btn--dark" data-link="absen-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
+        </div>
+        <div class="phone phone--card" aria-hidden="true">
+          <div class="phone__screen phone__screen--face">
+            <div class="avatar"></div>
+            <div class="tick"><svg class="ic"><use href="#i-check"/></svg></div>
+          </div>
+        </div>
+      </article>
+
       <!-- Lapak Kosan -->
       <article class="card card--soon">
         <span class="badge badge--soon">Coming Soon</span>
@@ -118,30 +140,6 @@
         <button class="btn btn--disabled" disabled>Segera Hadir</button>
       </article>
 
-      <!-- Lapak Absen -->
-      <article class="card card--featured" id="absen">
-        <span class="badge badge--live">Tersedia</span>
-        <svg class="card__icon card__icon--blue" aria-hidden="true"><use href="#i-absen"/></svg>
-        <h3>LAPAK <span class="blue">ABSEN</span></h3>
-        <p>Solusi absensi dan pengelolaan karyawan.</p>
-        <ul class="checks">
-          <li><svg class="ic"><use href="#i-check"/></svg>Absensi via HP</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Face Recognition</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>GPS Maps</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Payroll</li>
-        </ul>
-        <div class="card__actions">
-          <!-- TODO: ganti # dengan URL Lapak Absen versi web & APK -->
-          <a href="#" class="btn" data-link="absen-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
-          <a href="#" class="btn btn--dark" data-link="absen-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
-        </div>
-        <div class="phone phone--card" aria-hidden="true">
-          <div class="phone__screen phone__screen--face">
-            <div class="avatar"></div>
-            <div class="tick"><svg class="ic"><use href="#i-check"/></svg></div>
-          </div>
-        </div>
-      </article>
     </div>
   </section>
 
