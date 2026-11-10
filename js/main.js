@@ -1,7 +1,8 @@
 // ===== KONFIGURASI LINK — ganti sesuai URL asli =====
 const LINKS = {
   "absen-web": "https://lapakabsensi.github.io/lapakabsensi/",
-  "absen-apk": "downloads/Lapak-Absen.apk"
+  "absen-apk": "downloads/Lapak-Absen.apk",
+  "whatsapp": ""      // isi nomor WA format internasional tanpa +, contoh: "6281234567890" -> tombol kontak otomatis muncul
 };
 
 document.querySelectorAll("[data-link]").forEach(a => {
@@ -30,3 +31,32 @@ addEventListener("scroll", () => {
 }, { passive: true });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Kontak (WhatsApp) — tampil hanya kalau nomor diisi di LINKS.whatsapp
+if (LINKS.whatsapp) {
+  const wa = LINKS.whatsapp.replace(/\D/g, "");
+  document.querySelectorAll('[data-link="whatsapp"]').forEach(a => a.href = "https://wa.me/" + wa);
+  document.querySelectorAll("[data-contact]").forEach(el => el.hidden = false);
+}
+
+// Header shadow + tombol kembali ke atas
+const nav = document.querySelector(".nav");
+const toTop = document.getElementById("toTop");
+const onScroll = () => {
+  nav.classList.toggle("scrolled", scrollY > 8);
+  toTop.hidden = scrollY < 600;
+};
+addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+toTop.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+
+// Animasi muncul saat di-scroll
+const items = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  items.forEach((el, i) => { el.style.transitionDelay = (i % 3) * 80 + "ms"; io.observe(el); });
+} else {
+  items.forEach(el => el.classList.add("in"));
+}
