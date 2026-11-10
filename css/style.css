@@ -54,6 +54,7 @@ a{color:inherit;text-decoration:none}
 .mini-row b{height:10px;flex:1;background:#E5E7EB;border-radius:6px}
 .mini-card{display:flex;align-items:center;gap:10px;padding:14px;border-radius:16px;background:var(--soft);font-weight:700;font-size:14px;color:var(--orange-d);border:1px solid var(--line)}
 .mini-card .ic{width:28px;height:28px}
+.mini-card img.ic{border-radius:8px}
 .mini-card--dim{background:#F3F4F6;color:#6B7280;border-color:#E5E7EB}
 
 /* Products */
@@ -63,7 +64,7 @@ a{color:inherit;text-decoration:none}
 .card:hover{transform:translateY(-4px)}
 .card--featured{background:linear-gradient(135deg,#fff 40%,#DCEBFF);border-color:#BFD7FF}
 .card__icon{width:70px;height:70px;color:var(--navy);margin-bottom:10px}
-.card__icon--blue{color:var(--blue)}
+.card__icon--logo{width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(15,23,42,.18))}
 .card h3{font-size:26px;font-weight:800;color:var(--navy);letter-spacing:-.3px}
 .card h3 span{color:var(--orange)}
 .card h3 .blue{color:var(--blue)}

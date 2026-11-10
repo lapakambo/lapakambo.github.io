@@ -1,6 +1,6 @@
 // ===== KONFIGURASI LINK — ganti sesuai URL asli =====
 const LINKS = {
-  "absen-web": "#",   // contoh: "https://absen.lapakambo.com"
+  "absen-web": "https://lapakabsensi.github.io/lapakabsensi/",
   "absen-apk": "#"    // contoh: "https://github.com/USERNAME/REPO/releases/latest/download/lapak-absen.apk"
 };
 
