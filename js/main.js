@@ -1,6 +1,6 @@
 // ===== KONFIGURASI LINK — ganti sesuai URL asli =====
 const LINKS = {
-  "absen-web": "https://lapakabsensi.github.io/lapakabsensi/",
+  "absen-web": "https://lapakabsensi.github.io/lapakabsensi/?c=akundemo",
   "absen-apk": "downloads/Lapak-Absen.apk",
   "whatsapp": ""      // isi nomor WA format internasional tanpa +, contoh: "6281234567890" -> tombol kontak otomatis muncul
 };
