@@ -69,6 +69,34 @@ if ("IntersectionObserver" in window) {
   items.forEach(el => el.classList.add("in"));
 }
 
+// Tab galeri "Tampilan Aplikasi" (Absen / Gudang)
+(() => {
+  const tabs = [...document.querySelectorAll(".stab")];
+  if (!tabs.length) return;
+  const select = (tab, focus) => {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.classList.toggle("is-active", on);
+      t.setAttribute("aria-selected", on);
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute("aria-controls"));
+      panel.classList.toggle("is-active", on);
+      // elemen .reveal di panel yang tadinya tersembunyi tidak pernah terpantau observer, tampilkan langsung
+      if (on) panel.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
+    });
+    if (focus) tab.focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener("click", () => select(t));
+    t.addEventListener("keydown", e => {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        e.preventDefault();
+        select(tabs[(i + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length], true);
+      }
+    });
+  });
+})();
+
 // Hero slider: ganti slide otomatis (Platform, Absen, Gudang, Kosan). Waktu tiap slide diatur oleh animasi
 // bar progres di tab (CSS), jadi pause/resume otomatis sinkron. Berhenti saat di-hover, difokus, disentuh,
 // tab tidak aktif, atau hero di luar layar. Bisa di-swipe, panah, dan tab. Tidak otomatis kalau reduced-motion.

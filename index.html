@@ -163,7 +163,7 @@
               </div>
               <div class="win win--b">
                 <div class="win__bar"><i></i><i></i><i></i><span>Dashboard</span></div>
-                <img src="assets/screenshots/gudang-dashboard.webp" alt="" width="1000" height="339" loading="lazy" decoding="async">
+                <img src="assets/screenshots/gudang-dashboard.webp" alt="" width="1090" height="370" loading="lazy" decoding="async">
               </div>
               <span class="chip chip--tr"><svg class="ic"><use href="#i-gudang"/></svg>Manajemen Stok</span>
               <span class="chip chip--bl"><svg class="ic"><use href="#i-growth"/></svg>Laporan Real-time</span>
@@ -350,9 +350,16 @@
       <div class="shots" id="tampilan">
         <div class="section__head section__head--sub reveal">
           <span class="eyebrow">Tampilan Aplikasi</span>
-          <h2>Intip tampilan <span>Lapak Absen</span></h2>
-          <p>Contoh tampilan asli dari akun demo: dashboard admin di komputer, dan aplikasi karyawan di HP.</p>
+          <h2>Intip tampilan <span>aplikasi kami</span></h2>
+          <p>Contoh tampilan asli dari akun demo Lapak Absen dan Lapak Gudang.</p>
         </div>
+
+        <div class="shots__tabs" role="tablist" aria-label="Pilih aplikasi">
+          <button type="button" class="stab is-active" role="tab" id="tab-absen" aria-selected="true" aria-controls="shots-absen"><img src="assets/lapak-absen.png" alt="" width="26" height="26">Lapak Absen</button>
+          <button type="button" class="stab" role="tab" id="tab-gudang" aria-selected="false" aria-controls="shots-gudang" tabindex="-1"><img src="assets/lapak-gudang.png" alt="" width="26" height="26">Lapak Gudang</button>
+        </div>
+
+        <div class="shotpanel is-active" id="shots-absen" role="tabpanel" aria-labelledby="tab-absen">
         <figure class="shot shot--desk reveal">
           <div class="frame">
             <div class="browser" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -373,6 +380,31 @@
             <div class="phoneframe"><img src="assets/screenshots/app-shift.webp" alt="Jadwal shift 7 hari di aplikasi Lapak Absen" width="480" height="982" loading="lazy"></div>
             <figcaption>Jadwal shift 7 hari</figcaption>
           </figure>
+        </div>
+        <div class="shotpanel__cta reveal">
+          <a href="#" class="btn" data-link="absen-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Coba Lapak Absen</a>
+        </div>
+        </div>
+
+        <div class="shotpanel" id="shots-gudang" role="tabpanel" aria-labelledby="tab-gudang">
+          <figure class="shot shot--desk reveal">
+            <div class="frame">
+              <div class="browser" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="assets/screenshots/gudang-login.webp" alt="Halaman masuk Lapak Gudang dengan pilihan akun demo Admin, Staf Gudang, dan Sales" width="1200" height="540" loading="lazy">
+            </div>
+            <figcaption>Halaman masuk, lengkap dengan akun demo</figcaption>
+          </figure>
+          <figure class="shot shot--desk shot--next reveal">
+            <div class="frame">
+              <div class="browser" aria-hidden="true"><i></i><i></i><i></i></div>
+              <img src="assets/screenshots/gudang-dashboard.webp" alt="Dashboard Lapak Gudang: jumlah jenis barang, total unit di stok, stok menipis, dan daftar perlu restock" width="1090" height="370" loading="lazy">
+            </div>
+            <figcaption>Dashboard stok: ringkasan, pergerakan barang, dan daftar perlu restock</figcaption>
+          </figure>
+          <div class="shotpanel__cta reveal">
+            <a href="#" class="btn" data-link="gudang-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Coba Lapak Gudang</a>
+            <a href="#" class="btn btn--wa" data-link="whatsapp-gudang" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Tanya Harga</a>
+          </div>
         </div>
       </div>
 
