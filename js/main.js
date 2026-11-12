@@ -36,8 +36,13 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // Kontak (WhatsApp) — tampil hanya kalau nomor diisi di LINKS.whatsapp
 if (LINKS.whatsapp) {
   const wa = LINKS.whatsapp.replace(/\D/g, "");
-  const msg = encodeURIComponent("Halo LAPAK AMBO, saya ingin konsultasi dan pemesanan.");
-  document.querySelectorAll('[data-link="whatsapp"]').forEach(a => a.href = "https://wa.me/" + wa + "?text=" + msg);
+  const pesan = {
+    "whatsapp": "Halo LAPAK AMBO, saya ingin konsultasi dan pemesanan.",
+    "whatsapp-gudang": "Halo LAPAK AMBO, saya ingin tanya harga Lapak Gudang."
+  };
+  Object.entries(pesan).forEach(([key, teks]) => {
+    document.querySelectorAll('[data-link="' + key + '"]').forEach(a => a.href = "https://wa.me/" + wa + "?text=" + encodeURIComponent(teks));
+  });
   document.querySelectorAll("[data-contact]").forEach(el => el.hidden = false);
 }
 
@@ -62,3 +67,70 @@ if ("IntersectionObserver" in window) {
 } else {
   items.forEach(el => el.classList.add("in"));
 }
+
+// Slider CTA: geser otomatis, bisa di-swipe, dots & panah. Berhenti saat disentuh/di-hover,
+// saat tab tidak aktif, saat slider di luar layar, dan tidak otomatis kalau pengguna memilih reduced-motion.
+(() => {
+  const track = document.getElementById("ctaTrack");
+  const dotsBox = document.getElementById("ctaDots");
+  if (!track || !dotsBox) return;
+  const slides = [...track.children];
+  const slider = document.getElementById("ctaSlider");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const DELAY = 6000;
+  let index = 0, timer = null, paused = false, visible = true, lockUntil = 0;
+
+  const dots = slides.map((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "cta__dot";
+    b.setAttribute("aria-label", "Ke slide " + (i + 1));
+    b.addEventListener("click", () => { go(i); restart(); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  const mark = i => {
+    index = i;
+    dots.forEach((d, n) => {
+      d.classList.toggle("is-active", n === i);
+      if (n === i) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current");
+    });
+  };
+  const go = i => {
+    const n = (i + slides.length) % slides.length;
+    lockUntil = Date.now() + 800;   // abaikan event scroll selama animasi geser
+    track.scrollTo({ left: n * track.clientWidth, behavior: reduce ? "auto" : "smooth" });
+    mark(n);
+  };
+  const stop = () => { clearInterval(timer); timer = null; };
+  const start = () => {
+    if (reduce || timer) return;
+    timer = setInterval(() => { if (!paused && visible && !document.hidden) go(index + 1); }, DELAY);
+  };
+  const restart = () => { stop(); start(); };
+
+  track.addEventListener("scroll", () => {
+    if (Date.now() < lockUntil) return;
+    const i = Math.round(track.scrollLeft / track.clientWidth);
+    if (i !== index && i >= 0 && i < slides.length) mark(i);
+  }, { passive: true });
+  document.getElementById("ctaPrev").addEventListener("click", () => { go(index - 1); restart(); });
+  document.getElementById("ctaNext").addEventListener("click", () => { go(index + 1); restart(); });
+
+  const hold = () => { paused = true; };
+  const release = () => { paused = false; restart(); };
+  slider.addEventListener("mouseenter", hold);
+  slider.addEventListener("mouseleave", release);
+  slider.addEventListener("focusin", hold);
+  slider.addEventListener("focusout", release);
+  slider.addEventListener("touchstart", hold, { passive: true });
+  slider.addEventListener("touchend", release, { passive: true });
+  addEventListener("resize", () => track.scrollTo({ left: index * track.clientWidth, behavior: "auto" }));
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.4 }).observe(slider);
+  }
+  mark(0);
+  start();
+})();
