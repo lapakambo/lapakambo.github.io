@@ -226,7 +226,23 @@ a{color:inherit;text-decoration:none}
 .footer__cta span{color:#FB923C;font-weight:700}
 .footer__meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:center;font-size:13px;color:#9FB0D3}
 
-.to-top{position:fixed;right:20px;bottom:20px;z-index:40;width:46px;height:46px;border:0;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 24px rgba(249,115,22,.45);transition:transform .2s}
+/* Kontak WhatsApp */
+.btn--wa{background:linear-gradient(180deg,#2FD86B,#16A34A);box-shadow:0 8px 18px rgba(22,163,74,.35)}
+.btn--wa:hover{box-shadow:0 12px 24px rgba(22,163,74,.42)}
+.contactbox{display:flex;align-items:center;gap:30px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:38px 44px;box-shadow:var(--shadow)}
+.contactbox__ic{display:grid;place-items:center;width:76px;height:76px;border-radius:22px;background:#DCFCE7;color:#16A34A;flex:none}
+.contactbox__ic .ic{width:40px;height:40px}
+.contactbox__text{flex:1}
+.contactbox h2{font-size:clamp(24px,3.2vw,34px)}
+.contactbox__text p{margin-top:10px;color:var(--muted);font-size:17px}
+.contactbox__actions{display:flex;flex-direction:column;align-items:center;gap:10px;flex:none}
+.contactbox__num{font-weight:800;font-size:20px;color:var(--navy);letter-spacing:.3px}
+.footer__contact a{color:#FDBA74;font-weight:700}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:41;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px rgba(37,211,102,.5);transition:transform .2s}
+.wa-float .ic{width:28px;height:28px}
+.wa-float:hover{transform:translateY(-3px)}
+
+.to-top{position:fixed;right:24px;bottom:86px;z-index:40;width:46px;height:46px;border:0;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 24px rgba(249,115,22,.45);transition:transform .2s}
 .to-top:hover{transform:translateY(-3px)}
 .to-top[hidden]{display:none}
 
@@ -264,6 +280,8 @@ a{color:inherit;text-decoration:none}
   .showcase__actions{justify-content:center}
   .cta__inner{flex-direction:column;text-align:center;padding:36px 26px}
   .cta__actions{justify-content:center}
+  .contactbox{flex-direction:column;text-align:center;padding:32px 24px}
+  .contactbox .eyebrow--left{justify-content:center}
 }
 @media(max-width:640px){
   .products__grid,.features-grid,.trust__grid{grid-template-columns:1fr}

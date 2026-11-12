@@ -2,7 +2,7 @@
 const LINKS = {
   "absen-web": "https://lapakabsensi.github.io/lapakabsensi/?c=akundemo",
   "absen-apk": "downloads/Lapak-Absen.apk",
-  "whatsapp": ""      // isi nomor WA format internasional tanpa +, contoh: "6281234567890" -> tombol kontak otomatis muncul
+  "whatsapp": "6282384691477"      // nomor WA format internasional tanpa + (0823-8469-1477)
 };
 
 document.querySelectorAll("[data-link]").forEach(a => {
@@ -35,7 +35,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // Kontak (WhatsApp) — tampil hanya kalau nomor diisi di LINKS.whatsapp
 if (LINKS.whatsapp) {
   const wa = LINKS.whatsapp.replace(/\D/g, "");
-  document.querySelectorAll('[data-link="whatsapp"]').forEach(a => a.href = "https://wa.me/" + wa);
+  const msg = encodeURIComponent("Halo LAPAK AMBO, saya ingin konsultasi dan pemesanan.");
+  document.querySelectorAll('[data-link="whatsapp"]').forEach(a => a.href = "https://wa.me/" + wa + "?text=" + msg);
   document.querySelectorAll("[data-contact]").forEach(el => el.hidden = false);
 }
 
