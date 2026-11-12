@@ -53,6 +53,7 @@
   <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
   <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.600-4.700A8.500 8.500 0 1 1 8 19.500z"/><path d="M9 9.500c0 3 2.500 5.500 5.500 5.500l1-1.500-2-1-.8.800c-.8-.4-1.600-1.200-2-2l.8-.8-1-2z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
 </svg>
 
 <!-- ============ NAVBAR ============ -->
@@ -64,11 +65,13 @@
 
     <nav class="nav__links" id="menu" aria-label="Menu utama">
       <a href="#top" class="active">Beranda</a>
+      <a href="#tentang">Tentang Kami</a>
       <a href="#produk">Produk</a>
       <a href="#fitur">Fitur</a>
-      <a href="#tentang">Tentang Kami</a>
       <a href="#bantuan">Bantuan</a>
+      <a href="#" class="btn btn--sm menu__cta" data-link="absen-web" target="_blank" rel="noopener">Coba Lapak Absen</a>
     </nav>
+    <a href="#" class="btn btn--sm nav__cta" data-link="absen-web" target="_blank" rel="noopener">Coba Lapak Absen</a>
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -78,50 +81,17 @@
   <section class="hero">
     <div class="container hero__inner">
       <div class="hero__text">
+        <span class="hero__tag">Aplikasi absensi &amp; manajemen bisnis</span>
         <h1>Satu Platform.<br><span>Banyak Solusi.</span></h1>
         <p><strong>LAPAK AMBO</strong> menghadirkan berbagai aplikasi bisnis untuk membantu Anda mengelola usaha dengan lebih <strong>mudah, efisien dan terintegrasi.</strong></p>
         <div class="hero__actions">
           <a href="#produk" class="btn">Lihat Produk <svg class="ic"><use href="#i-arrow"/></svg></a>
-          <a href="#absen" class="btn btn--ghost">Coba Lapak Absen</a>
+          <a href="#produk" class="play" data-link="absen-web" target="_blank" rel="noopener"><span class="play__ic"><svg class="ic"><use href="#i-play"/></svg></span>Coba Lapak Absen</a>
         </div>
       </div>
 
       <div class="hero__visual" aria-hidden="true">
-        <span class="tagline">Kelola Bisnismu<br>Lebih Mudah!</span>
-        <div class="phone phone--hero">
-          <div class="phone__screen">
-            <div class="mini-row"><i></i><b></b></div>
-            <div class="mini-card"><img class="ic" src="assets/lapak-absen.png" alt="" width="28" height="28"><span>Lapak Absen</span></div>
-            <div class="mini-card mini-card--dim"><svg class="ic"><use href="#i-kosan"/></svg><span>Lapak Kosan</span></div>
-            <div class="mini-card mini-card--dim"><svg class="ic"><use href="#i-gudang"/></svg><span>Lapak Gudang</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PRODUK ============ -->
-  <section class="products" id="produk">
-    <div class="container products__grid">
-
-      <!-- Lapak Absen -->
-      <article class="card card--featured" id="absen">
-        <span class="badge badge--live">Tersedia</span>
-        <img class="card__icon card__icon--logo" src="assets/lapak-absen.png" alt="Lapak Absen" width="80" height="80">
-        <h3>LAPAK <span class="blue">ABSEN</span></h3>
-        <p>Solusi absensi dan pengelolaan karyawan.</p>
-        <ul class="checks">
-          <li><svg class="ic"><use href="#i-check"/></svg>Absensi via HP</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Face Recognition</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>GPS Maps</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Payroll</li>
-        </ul>
-        <div class="card__actions">
-          <!-- TODO: ganti # dengan URL Lapak Absen versi web & APK -->
-          <a href="#" class="btn" data-link="absen-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
-          <a href="#" class="btn btn--dark" data-link="absen-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
-        </div>
-        <div class="phone phone--card" aria-hidden="true">
+        <div class="phone phone--app hero__phone">
           <div class="phone__screen app">
             <div class="app__status"><span>08:02</span><span class="app__sig"><i></i><i></i><i></i></span></div>
             <div class="app__head">
@@ -148,38 +118,104 @@
             </div>
           </div>
         </div>
-      </article>
+        <span class="chip chip--1"><svg class="ic"><use href="#i-face"/></svg>Face Recognition</span>
+        <span class="chip chip--2"><svg class="ic"><use href="#i-pin"/></svg>GPS Maps</span>
+        <span class="chip chip--3"><svg class="ic"><use href="#i-wallet"/></svg>Payroll</span>
+      </div>
+    </div>
 
-      <!-- Lapak Kosan -->
-      <article class="card card--soon">
-        <span class="badge badge--soon">Coming Soon</span>
-        <svg class="card__icon" aria-hidden="true"><use href="#i-kosan"/></svg>
-        <h3>LAPAK <span>KOSAN</span></h3>
-        <p>Solusi pengelolaan usaha kos yang lebih mudah.</p>
-        <ul class="checks">
-          <li><svg class="ic"><use href="#i-check"/></svg>Kelola penghuni &amp; kontrak</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Tagihan otomatis</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Laporan keuangan</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Akses dari HP</li>
-        </ul>
-        <button class="btn btn--disabled" disabled>Segera Hadir</button>
-      </article>
+    <svg class="hero__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 70C220 10 430 20 700 62s520 54 740-10v68H0Z" fill="#fff" fill-opacity=".35"/>
+      <path d="M0 92c240-52 470-48 720-8s470 38 720-14v50H0Z" fill="#fff"/>
+    </svg>
+  </section>
 
-      <!-- Lapak Gudang -->
-      <article class="card card--soon">
-        <span class="badge badge--soon">Coming Soon</span>
-        <svg class="card__icon" aria-hidden="true"><use href="#i-gudang"/></svg>
-        <h3>LAPAK <span>GUDANG</span></h3>
-        <p>ERP System untuk pengelolaan gudang dan bisnis.</p>
-        <ul class="checks">
-          <li><svg class="ic"><use href="#i-check"/></svg>Manajemen stok</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Transaksi barang</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Laporan real-time</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Multi-user</li>
-        </ul>
-        <button class="btn btn--disabled" disabled>Segera Hadir</button>
-      </article>
+  <!-- ============ KEUNGGULAN ============ -->
+  <section class="trust" aria-label="Keunggulan LAPAK AMBO">
+    <div class="container trust__grid">
+      <div class="trust__item reveal"><svg class="ic"><use href="#i-shield"/></svg><div><b>Aman &amp; Terpercaya</b><span>Data bisnis Anda terlindungi</span></div></div>
+      <div class="trust__item reveal"><svg class="ic"><use href="#i-headset"/></svg><div><b>Dukungan Profesional</b><span>Siap membantu Anda</span></div></div>
+      <div class="trust__item reveal"><svg class="ic"><use href="#i-bolt"/></svg><div><b>Mudah Digunakan</b><span>Desain intuitif &amp; modern</span></div></div>
+      <div class="trust__item reveal"><svg class="ic"><use href="#i-growth"/></svg><div><b>Tumbuh Lebih Cepat</b><span>Optimalkan bisnis Anda</span></div></div>
+    </div>
+  </section>
 
+  <!-- ============ TENTANG KAMI ============ -->
+  <section class="section" id="tentang">
+    <div class="container about">
+      <div class="about__text reveal">
+        <span class="eyebrow eyebrow--left">Tentang Kami</span>
+        <h2>Satu lapak, <span>semua solusi bisnis</span></h2>
+        <p><strong>LAPAK AMBO</strong> adalah platform yang menghadirkan berbagai aplikasi bisnis dalam satu tempat, supaya usaha Anda bisa dikelola dengan lebih mudah, efisien dan terintegrasi.</p>
+        <p>Kami mulai dari absensi karyawan, lalu berlanjut ke pengelolaan usaha kos dan ERP untuk gudang.</p>
+      </div>
+      <ol class="roadmap reveal" aria-label="Peta produk">
+        <li class="road road--live"><span class="road__dot"></span><div><b>Lapak Absen</b><small>Absensi dan pengelolaan karyawan</small></div><em>Tersedia</em></li>
+        <li class="road"><span class="road__dot"></span><div><b>Lapak Kosan</b><small>Pengelolaan usaha kos</small></div><em>Segera</em></li>
+        <li class="road"><span class="road__dot"></span><div><b>Lapak Gudang</b><small>ERP gudang dan bisnis</small></div><em>Segera</em></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PRODUK ============ -->
+  <section class="section section--soft" id="produk">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Produk</span>
+        <h2>Satu platform, <span>tiga aplikasi</span></h2>
+        <p>Pilih aplikasi yang sesuai dengan kebutuhan usaha Anda.</p>
+      </div>
+      <div class="products__grid">
+
+        <!-- Lapak Absen -->
+        <article class="card card--featured reveal" id="absen">
+          <span class="badge badge--live">Tersedia</span>
+          <span class="card__icon"><img src="assets/lapak-absen.png" alt="Lapak Absen" width="48" height="48"></span>
+          <h3>LAPAK <span>ABSEN</span></h3>
+          <p>Solusi absensi dan pengelolaan karyawan.</p>
+          <ul class="checks">
+            <li><svg class="ic"><use href="#i-check"/></svg>Absensi via HP</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Face Recognition</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>GPS Maps</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Payroll</li>
+          </ul>
+          <div class="card__actions">
+            <a href="#" class="btn" data-link="absen-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
+            <a href="#" class="btn btn--dark" data-link="absen-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
+          </div>
+        </article>
+
+        <!-- Lapak Kosan -->
+        <article class="card card--soon reveal">
+          <span class="badge badge--soon">Coming Soon</span>
+          <span class="card__icon"><svg aria-hidden="true"><use href="#i-kosan"/></svg></span>
+          <h3>LAPAK <span>KOSAN</span></h3>
+          <p>Solusi pengelolaan usaha kos yang lebih mudah.</p>
+          <ul class="checks">
+            <li><svg class="ic"><use href="#i-check"/></svg>Kelola penghuni &amp; kontrak</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Tagihan otomatis</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Laporan keuangan</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Akses dari HP</li>
+          </ul>
+          <button class="btn btn--disabled" disabled>Segera Hadir</button>
+        </article>
+
+        <!-- Lapak Gudang -->
+        <article class="card card--soon reveal">
+          <span class="badge badge--soon">Coming Soon</span>
+          <span class="card__icon"><svg aria-hidden="true"><use href="#i-gudang"/></svg></span>
+          <h3>LAPAK <span>GUDANG</span></h3>
+          <p>ERP System untuk pengelolaan gudang dan bisnis.</p>
+          <ul class="checks">
+            <li><svg class="ic"><use href="#i-check"/></svg>Manajemen stok</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Transaksi barang</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Laporan real-time</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Multi-user</li>
+          </ul>
+          <button class="btn btn--disabled" disabled>Segera Hadir</button>
+        </article>
+
+      </div>
     </div>
   </section>
 
@@ -222,54 +258,30 @@
         <h2>Mulai dalam <span>3 langkah</span></h2>
       </div>
       <ol class="steps">
-        <li class="step reveal"><span class="step__no">1</span><h3>Pilih versi</h3><p>Buka versi web, atau unduh aplikasi APK untuk Android.</p></li>
-        <li class="step reveal"><span class="step__no">2</span><h3>Masuk &amp; siapkan data</h3><p>Login, lalu atur data karyawan sesuai kebutuhan usaha Anda.</p></li>
-        <li class="step reveal"><span class="step__no">3</span><h3>Mulai absensi</h3><p>Karyawan absen lewat HP dengan face recognition dan GPS.</p></li>
+        <li class="step reveal"><span class="step__no">01</span><h3>Pilih versi</h3><p>Buka versi web, atau unduh aplikasi APK untuk Android.</p></li>
+        <li class="step reveal"><span class="step__no">02</span><h3>Masuk &amp; siapkan data</h3><p>Login, lalu atur data karyawan sesuai kebutuhan usaha Anda.</p></li>
+        <li class="step reveal"><span class="step__no">03</span><h3>Mulai absensi</h3><p>Karyawan absen lewat HP dengan face recognition dan GPS.</p></li>
       </ol>
-    </div>
-  </section>
-
-  <!-- ============ TENTANG KAMI ============ -->
-  <section class="section" id="tentang">
-    <div class="container about">
-      <div class="about__text reveal">
-        <span class="eyebrow">Tentang Kami</span>
-        <h2>Satu lapak, <span>semua solusi bisnis</span></h2>
-        <p><strong>LAPAK AMBO</strong> adalah platform yang menghadirkan berbagai aplikasi bisnis dalam satu tempat, supaya usaha Anda bisa dikelola dengan lebih mudah, efisien dan terintegrasi.</p>
-        <p>Kami mulai dari absensi karyawan, lalu berlanjut ke pengelolaan usaha kos dan ERP untuk gudang.</p>
-      </div>
-      <ol class="roadmap reveal" aria-label="Peta produk">
-        <li class="road road--live"><span class="road__dot"></span><div><b>Lapak Absen</b><small>Absensi dan pengelolaan karyawan</small></div><em>Tersedia</em></li>
-        <li class="road"><span class="road__dot"></span><div><b>Lapak Kosan</b><small>Pengelolaan usaha kos</small></div><em>Segera</em></li>
-        <li class="road"><span class="road__dot"></span><div><b>Lapak Gudang</b><small>ERP gudang dan bisnis</small></div><em>Segera</em></li>
-      </ol>
-    </div>
-    <div class="container features">
-      <div class="features__bar">
-      <div class="feat"><svg class="ic ic--lg"><use href="#i-shield"/></svg><div><b>Aman &amp; Terpercaya</b><span>Data bisnis Anda terlindungi</span></div></div>
-      <div class="feat"><svg class="ic ic--lg"><use href="#i-headset"/></svg><div><b>Dukungan Profesional</b><span>Siap membantu Anda</span></div></div>
-      <div class="feat"><svg class="ic ic--lg"><use href="#i-bolt"/></svg><div><b>Mudah Digunakan</b><span>Desain intuitif &amp; modern</span></div></div>
-      <div class="feat"><svg class="ic ic--lg"><use href="#i-growth"/></svg><div><b>Tumbuh Lebih Cepat</b><span>Optimalkan bisnis Anda</span></div></div>
-    </div>
     </div>
   </section>
 
   <!-- ============ FAQ ============ -->
-  <section class="section section--soft" id="bantuan">
-    <div class="container">
-      <div class="section__head reveal">
-        <span class="eyebrow">Bantuan</span>
+  <section class="section" id="bantuan">
+    <div class="container faqwrap">
+      <div class="faqwrap__intro reveal">
+        <span class="eyebrow eyebrow--left">Bantuan</span>
         <h2>Pertanyaan yang <span>sering diajukan</span></h2>
+        <p>Jawaban singkat seputar LAPAK AMBO dan aplikasi Lapak Absen.</p>
+        <div class="contact" data-contact hidden>
+          <p>Masih ada pertanyaan? Hubungi kami langsung.</p>
+          <a href="#" class="btn" data-link="whatsapp" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Hubungi via WhatsApp</a>
+        </div>
       </div>
       <div class="faq reveal">
         <details open><summary>Apa itu LAPAK AMBO?<svg class="ic"><use href="#i-chev"/></svg></summary><p>LAPAK AMBO adalah platform yang menghadirkan berbagai aplikasi bisnis dalam satu tempat, mulai dari absensi karyawan, pengelolaan kos, hingga ERP gudang.</p></details>
         <details><summary>Lapak Absen bisa dipakai lewat apa?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Lapak Absen tersedia dalam versi web yang bisa dibuka lewat browser, dan dalam bentuk aplikasi APK untuk perangkat Android.</p></details>
         <details><summary>Bagaimana cara memasang aplikasi APK?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Unduh file lewat tombol Download APK, buka file tersebut di HP Android, izinkan pemasangan dari sumber tidak dikenal jika diminta, lalu ikuti proses instalasi.</p></details>
         <details><summary>Kapan Lapak Kosan dan Lapak Gudang tersedia?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Keduanya sedang dalam pengembangan dan berstatus Coming Soon. Pantau terus halaman ini untuk kabar terbarunya.</p></details>
-      </div>
-      <div class="contact reveal" data-contact hidden>
-        <p>Masih ada pertanyaan? Hubungi kami langsung.</p>
-        <a href="#" class="btn" data-link="whatsapp" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Hubungi via WhatsApp</a>
       </div>
     </div>
   </section>
@@ -309,8 +321,8 @@
       <h4>Navigasi</h4>
       <ul>
         <li><a href="#top">Beranda</a></li>
-        <li><a href="#produk">Produk</a></li>
         <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#produk">Produk</a></li>
         <li><a href="#bantuan">Bantuan</a></li>
       </ul>
     </div>
