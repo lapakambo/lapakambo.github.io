@@ -86,26 +86,147 @@
 </header>
 
 <main>
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <span class="hero__tag">Aplikasi absensi &amp; manajemen bisnis</span>
-        <h1>Satu Platform.<br><span>Banyak Solusi.</span></h1>
-        <p><strong>LAPAK AMBO</strong> menghadirkan berbagai aplikasi bisnis untuk membantu Anda mengelola usaha dengan lebih <strong>mudah, efisien dan terintegrasi.</strong></p>
-        <div class="hero__actions">
-          <a href="#produk" class="btn">Lihat Produk <svg class="ic"><use href="#i-arrow"/></svg></a>
-          <a href="#produk" class="play" data-link="absen-web" target="_blank" rel="noopener"><span class="play__ic"><svg class="ic"><use href="#i-play"/></svg></span>Coba Lapak Absen</a>
+  <!-- ============ HERO (slider otomatis: Platform, Absen, Gudang, Kosan) ============ -->
+  <section class="hero" id="hero" data-i="0" aria-roledescription="carousel" aria-label="Aplikasi LAPAK AMBO">
+    <div class="hero__glow hero__glow--0" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--3" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero__stage" id="heroStage">
+
+        <!-- 1. Platform -->
+        <div class="hslide is-active" role="group" aria-roledescription="slide" aria-label="1 dari 4: LAPAK AMBO" style="--c1:#F97316;--c2:#FDBA74">
+          <div class="hero__text">
+            <span class="hero__tag">Aplikasi absensi &amp; manajemen bisnis</span>
+            <h1 class="hero__h">Satu Platform.<br><span>Banyak Solusi.</span></h1>
+            <p><strong>LAPAK AMBO</strong> menghadirkan berbagai aplikasi bisnis untuk membantu Anda mengelola usaha dengan lebih <strong>mudah, efisien dan terintegrasi.</strong></p>
+            <div class="hero__actions">
+              <a href="#produk" class="btn">Lihat Produk <svg class="ic"><use href="#i-arrow"/></svg></a>
+              <a href="#produk" class="play" data-link="absen-web" target="_blank" rel="noopener"><span class="play__ic"><svg class="ic"><use href="#i-play"/></svg></span>Coba Lapak Absen</a>
+            </div>
+          </div>
+          <div class="hv" aria-hidden="true">
+            <div class="stage">
+              <div class="hub__core"><img src="assets/logo.png" alt="" width="547" height="168" fetchpriority="high" decoding="async"></div>
+              <div class="hub__orb" style="--n:0"><span class="hub__tile"><img src="assets/lapak-absen.png" alt="" width="72" height="72"></span><b>Lapak Absen</b></div>
+              <div class="hub__orb" style="--n:1"><span class="hub__tile"><img src="assets/lapak-gudang.png" alt="" width="72" height="72"></span><b>Lapak Gudang</b></div>
+              <div class="hub__orb" style="--n:2"><span class="hub__tile hub__tile--soon"><img src="assets/lapak-kosan.png" alt="" width="72" height="72"><i>Segera</i></span><b>Lapak Kosan</b></div>
+              <span class="chip chip--tl"><svg class="ic"><use href="#i-shield"/></svg>Aman &amp; Terpercaya</span>
+              <span class="chip chip--bl"><svg class="ic"><use href="#i-bolt"/></svg>Mudah Digunakan</span>
+              <span class="chip chip--r"><svg class="ic"><use href="#i-devices"/></svg>Web &amp; Android</span>
+            </div>
+          </div>
         </div>
+
+        <!-- 2. Lapak Absen -->
+        <div class="hslide" role="group" aria-roledescription="slide" aria-label="2 dari 4: Lapak Absen" style="--c1:#3B82F6;--c2:#93C5FD;--hl:#7DB4FF">
+          <div class="hero__text">
+            <span class="hero__tag"><img src="assets/lapak-absen.png" alt="" width="20" height="20">Lapak Absen &middot; Tersedia</span>
+            <h2 class="hero__h">Absensi Karyawan<br><span>Lebih Cerdas.</span></h2>
+            <p>Absen lewat HP dengan <strong>Face Recognition</strong> dan <strong>GPS Maps</strong>, lengkap dengan jadwal shift, pengajuan cuti, dan <strong>payroll</strong> dalam satu aplikasi.</p>
+            <div class="hero__actions">
+              <a href="#" class="btn" data-link="absen-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
+              <a href="#" class="btn btn--glass" data-link="absen-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
+            </div>
+            <span class="hero__note">Karyawan tanpa batas. Harga via WhatsApp.</span>
+          </div>
+          <div class="hv" aria-hidden="true">
+            <div class="stage">
+              <div class="hp hp--2"><img src="assets/screenshots/app-shift.webp" alt="" width="480" height="982" loading="lazy" decoding="async"></div>
+              <div class="hp hp--1"><img src="assets/screenshots/app-beranda.webp" alt="" width="480" height="982" loading="lazy" decoding="async"></div>
+              <span class="chip chip--tl"><svg class="ic"><use href="#i-face"/></svg>Face Recognition</span>
+              <span class="chip chip--bl"><svg class="ic"><use href="#i-pin"/></svg>GPS Maps</span>
+              <span class="chip chip--r"><svg class="ic"><use href="#i-wallet"/></svg>Payroll</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Lapak Gudang -->
+        <div class="hslide" role="group" aria-roledescription="slide" aria-label="3 dari 4: Lapak Gudang" style="--c1:#EA580C;--c2:#FDBA74">
+          <div class="hero__text">
+            <span class="hero__tag"><img src="assets/lapak-gudang.png" alt="" width="20" height="20">Lapak Gudang &middot; Tersedia</span>
+            <h2 class="hero__h">Stok Gudang<br><span>Selalu Terkendali.</span></h2>
+            <p>ERP untuk gudang dan bisnis: <strong>manajemen stok</strong>, barang masuk dan keluar, pindah gudang, garansi &amp; RMA, sampai <strong>laporan real-time</strong> untuk banyak pengguna.</p>
+            <div class="hero__actions">
+              <a href="#" class="btn" data-link="gudang-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Coba Versi Web</a>
+              <a href="#" class="btn btn--glass" data-link="whatsapp-gudang" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Tanya Harga</a>
+            </div>
+            <span class="hero__note">Mau coba? Pilih akun demo: Admin, Staf Gudang, atau Sales.</span>
+          </div>
+          <div class="hv" aria-hidden="true">
+            <div class="stage">
+              <div class="win win--a">
+                <div class="win__bar"><i></i><i></i><i></i><span>lapakgudang.github.io</span></div>
+                <img src="assets/screenshots/gudang-login.webp" alt="" width="1200" height="540" loading="lazy" decoding="async">
+              </div>
+              <div class="win win--b">
+                <div class="win__bar"><i></i><i></i><i></i><span>Dashboard</span></div>
+                <img src="assets/screenshots/gudang-dashboard.webp" alt="" width="1000" height="339" loading="lazy" decoding="async">
+              </div>
+              <span class="chip chip--tr"><svg class="ic"><use href="#i-gudang"/></svg>Manajemen Stok</span>
+              <span class="chip chip--bl"><svg class="ic"><use href="#i-growth"/></svg>Laporan Real-time</span>
+              <span class="chip chip--br"><svg class="ic"><use href="#i-users"/></svg>Multi-user</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Lapak Kosan -->
+        <div class="hslide" role="group" aria-roledescription="slide" aria-label="4 dari 4: Lapak Kosan" style="--c1:#FACC15;--c2:#FDE68A;--hl:#FACC15">
+          <div class="hero__text">
+            <span class="hero__tag"><img src="assets/lapak-kosan.png" alt="" width="20" height="20">Lapak Kosan<span class="dot"></span>Segera Hadir</span>
+            <h2 class="hero__h">Kelola Usaha Kos<br><span>Tanpa Pusing.</span></h2>
+            <p>Pantau <strong>penghuni dan kontrak</strong>, kirim <strong>tagihan otomatis</strong>, dan lihat laporan keuangan kos Anda kapan saja dari HP.</p>
+            <div class="hero__actions">
+              <a href="#" class="btn" data-link="whatsapp-kosan" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Kabari Saya</a>
+              <a href="#produk" class="btn btn--glass">Lihat Semua Produk <svg class="ic"><use href="#i-arrow"/></svg></a>
+            </div>
+            <span class="hero__note">Tampilan di samping masih berupa ilustrasi.</span>
+          </div>
+          <div class="hv" aria-hidden="true">
+            <div class="stage">
+              <div class="hp hp--1 kos">
+                <div class="kos__screen">
+                  <div class="kos__top"><img src="assets/lapak-kosan.png" alt="" width="22" height="22"><b>Lapak Kosan</b><em>Nov</em></div>
+                  <div class="kos__sum"><small>Kamar terisi</small><strong>18<em>/20</em></strong><span class="kos__bar"><i></i></span></div>
+                  <div class="kos__h">Tagihan bulan ini</div>
+                  <ul class="kos__list">
+                    <li><span class="av">R</span><div><b>Kamar 01</b><small>Rina</small></div><em class="ok">Lunas</em></li>
+                    <li><span class="av">D</span><div><b>Kamar 02</b><small>Dimas</small></div><em class="wait">Menunggu</em></li>
+                    <li><span class="av">S</span><div><b>Kamar 03</b><small>Sari</small></div><em class="ok">Lunas</em></li>
+                    <li><span class="av">F</span><div><b>Kamar 04</b><small>Fajar</small></div><em class="ok">Lunas</em></li>
+                  </ul>
+                  <div class="kos__nav"><span class="on"><svg class="ic"><use href="#i-kosan"/></svg>Beranda</span><span><svg class="ic"><use href="#i-users"/></svg>Penghuni</span><span><svg class="ic"><use href="#i-wallet"/></svg>Tagihan</span></div>
+                </div>
+              </div>
+              <div class="mini mini--rev">
+                <small>Pendapatan Nov</small><strong>Rp 18,5 jt</strong>
+                <span class="mini__bars"><i style="height:38%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:72%"></i><i style="height:100%"></i></span>
+              </div>
+              <div class="mini mini--ctr">
+                <span class="mini__ic"><svg class="ic"><use href="#i-check"/></svg></span>
+                <div><b>Kontrak Kamar 05</b><small>berakhir 12 hari lagi</small></div>
+              </div>
+              <span class="chip chip--tl"><svg class="ic"><use href="#i-users"/></svg>Penghuni &amp; Kontrak</span>
+              <span class="chip chip--br"><svg class="ic"><use href="#i-wallet"/></svg>Tagihan Otomatis</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="hero__visual" aria-hidden="true">
-        <div class="phone phone--shot hero__phone">
-          <img src="assets/screenshots/app-beranda.webp" alt="" width="480" height="982" fetchpriority="high" decoding="async">
+      <div class="hero__ctrl" role="group" aria-label="Pilih aplikasi">
+        <div class="hero__tabs" id="heroTabs">
+          <button type="button" class="htab is-active" aria-label="Tampilkan LAPAK AMBO" aria-current="true"><span class="htab__ic htab__ic--all"><svg class="ic"><use href="#i-devices"/></svg></span><span>Semua</span></button>
+          <button type="button" class="htab" aria-label="Tampilkan Lapak Absen"><span class="htab__ic"><img src="assets/lapak-absen.png" alt="" width="26" height="26"></span><span>Absen</span></button>
+          <button type="button" class="htab" aria-label="Tampilkan Lapak Gudang"><span class="htab__ic"><img src="assets/lapak-gudang.png" alt="" width="26" height="26"></span><span>Gudang</span></button>
+          <button type="button" class="htab" aria-label="Tampilkan Lapak Kosan"><span class="htab__ic"><img src="assets/lapak-kosan.png" alt="" width="26" height="26"></span><span>Kosan</span></button>
         </div>
-        <span class="chip chip--1"><svg class="ic"><use href="#i-face"/></svg>Face Recognition</span>
-        <span class="chip chip--2"><svg class="ic"><use href="#i-pin"/></svg>GPS Maps</span>
-        <span class="chip chip--3"><svg class="ic"><use href="#i-wallet"/></svg>Payroll</span>
+        <div class="hero__arrows">
+          <button type="button" class="harrow harrow--prev" id="heroPrev" aria-label="Slide sebelumnya"><svg class="ic"><use href="#i-chev"/></svg></button>
+          <button type="button" class="harrow harrow--next" id="heroNext" aria-label="Slide berikutnya"><svg class="ic"><use href="#i-chev"/></svg></button>
+        </div>
       </div>
     </div>
 

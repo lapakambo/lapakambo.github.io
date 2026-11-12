@@ -38,7 +38,8 @@ if (LINKS.whatsapp) {
   const wa = LINKS.whatsapp.replace(/\D/g, "");
   const pesan = {
     "whatsapp": "Halo LAPAK AMBO, saya ingin konsultasi dan pemesanan.",
-    "whatsapp-gudang": "Halo LAPAK AMBO, saya ingin tanya harga Lapak Gudang."
+    "whatsapp-gudang": "Halo LAPAK AMBO, saya ingin tanya harga Lapak Gudang.",
+    "whatsapp-kosan": "Halo LAPAK AMBO, tolong kabari saya kalau Lapak Kosan sudah rilis."
   };
   Object.entries(pesan).forEach(([key, teks]) => {
     document.querySelectorAll('[data-link="' + key + '"]').forEach(a => a.href = "https://wa.me/" + wa + "?text=" + encodeURIComponent(teks));
@@ -67,6 +68,66 @@ if ("IntersectionObserver" in window) {
 } else {
   items.forEach(el => el.classList.add("in"));
 }
+
+// Hero slider: ganti slide otomatis (Platform, Absen, Gudang, Kosan). Waktu tiap slide diatur oleh animasi
+// bar progres di tab (CSS), jadi pause/resume otomatis sinkron. Berhenti saat di-hover, difokus, disentuh,
+// tab tidak aktif, atau hero di luar layar. Bisa di-swipe, panah, dan tab. Tidak otomatis kalau reduced-motion.
+(() => {
+  const hero = document.getElementById("hero");
+  if (!hero) return;
+  const slides = [...hero.querySelectorAll(".hslide")];
+  const tabs = [...hero.querySelectorAll(".htab")];
+  const DELAY = 7000;
+  let index = 0, hover = false, focus = false, touch = false, visible = true;
+  hero.style.setProperty("--delay", DELAY + "ms");
+
+  const sync = () => hero.classList.toggle("is-paused", hover || focus || touch || !visible || document.hidden);
+  const show = n => {
+    index = (n + slides.length) % slides.length;
+    hero.dataset.i = index;
+    slides.forEach((s, k) => {
+      const on = k === index;
+      s.classList.toggle("is-active", on);
+      s.inert = !on;
+      s.setAttribute("aria-hidden", on ? "false" : "true");
+    });
+    tabs.forEach((t, k) => {
+      t.classList.remove("is-active");
+      if (k === index) { void t.offsetWidth; t.classList.add("is-active"); t.setAttribute("aria-current", "true"); }
+      else t.removeAttribute("aria-current");
+    });
+  };
+
+  tabs.forEach((t, k) => t.addEventListener("click", () => show(k)));
+  document.getElementById("heroPrev").addEventListener("click", () => show(index - 1));
+  document.getElementById("heroNext").addEventListener("click", () => show(index + 1));
+  // bar progres selesai = waktunya slide berikutnya
+  tabs.forEach(t => t.addEventListener("animationend", e => {
+    if (e.animationName === "fill" && t.classList.contains("is-active")) show(index + 1);
+  }));
+
+  const stage = document.getElementById("heroStage");
+  stage.addEventListener("mouseenter", () => { hover = true; sync(); });
+  stage.addEventListener("mouseleave", () => { hover = false; sync(); });
+  hero.addEventListener("focusin", () => { focus = true; sync(); });
+  hero.addEventListener("focusout", () => { focus = false; sync(); });
+  document.addEventListener("visibilitychange", sync);
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; sync(); }, { threshold: 0.25 }).observe(hero);
+  }
+
+  // Swipe di layar sentuh
+  let sx = 0, sy = 0;
+  stage.addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; touch = true; sync(); }, { passive: true });
+  stage.addEventListener("touchend", e => {
+    touch = false; sync();
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.3) show(index + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+  stage.addEventListener("touchcancel", () => { touch = false; sync(); }, { passive: true });
+
+  show(0);
+})();
 
 // Slider CTA: geser otomatis, bisa di-swipe, dots & panah. Berhenti saat disentuh/di-hover,
 // saat tab tidak aktif, saat slider di luar layar, dan tidak otomatis kalau pengguna memilih reduced-motion.
