@@ -264,6 +264,8 @@ html:not(.js) .hslide:not(.is-active){display:none}
 .showcase img{width:140px;height:140px;flex:none;border-radius:28px;box-shadow:0 12px 28px rgba(0,0,0,.3)}
 .showcase h3{font-size:clamp(22px,3vw,30px);margin-bottom:6px}
 .showcase p{color:#C7D2EA;margin-bottom:18px}
+.showcase p+p{margin-top:-10px;font-size:14px;color:#A9B8DA}
+.showcase p b{color:#fff}
 .showcase__actions{display:flex;flex-wrap:wrap;gap:12px}
 
 /* Cara memulai (kotak bernomor ala "Why Us") */
