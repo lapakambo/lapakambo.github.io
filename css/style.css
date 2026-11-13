@@ -401,7 +401,7 @@ html:not(.js) .hslide:not(.is-active){display:none}
 .pp.is-active{animation:panelin .5s ease both}
 html:not(.js) .pp+.pp{margin-top:40px}
 .pswitch{margin-bottom:34px}
-.showcase img.is-icon{background:#fff;padding:14px;object-fit:contain}
+.showcase img.is-icon{background:#fff;object-fit:contain}
 @keyframes panelin{from{opacity:0;transform:translateY(14px)}}
 .shotpanel__cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:34px}
 .shotpanel+.shotpanel{margin-top:0}
