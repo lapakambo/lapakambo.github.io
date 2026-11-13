@@ -3,6 +3,7 @@ const LINKS = {
   "absen-web": "https://lapakabsensi.github.io/lapakabsensi/?c=akundemo",
   "absen-apk": "https://github.com/lapakabsensi/lapakabsensi/releases/download/apk-terbaru/Lapak-Absen.apk",
   "gudang-web": "https://lapakgudang.github.io/lapakgudang/",
+  "kosan-web": "https://lapak-kosan.github.io/lapak-kosan/",
   "whatsapp": "6282384691477"      // nomor WA format internasional tanpa + (0823-8469-1477)
 };
 
@@ -39,7 +40,7 @@ if (LINKS.whatsapp) {
   const pesan = {
     "whatsapp": "Halo LAPAK AMBO, saya ingin konsultasi dan pemesanan.",
     "whatsapp-gudang": "Halo LAPAK AMBO, saya ingin tanya harga Lapak Gudang.",
-    "whatsapp-kosan": "Halo LAPAK AMBO, tolong kabari saya kalau Lapak Kosan sudah rilis."
+    "whatsapp-kosan": "Halo LAPAK AMBO, saya ingin tanya harga Lapak Kosan."
   };
   Object.entries(pesan).forEach(([key, teks]) => {
     document.querySelectorAll('[data-link="' + key + '"]').forEach(a => a.href = "https://wa.me/" + wa + "?text=" + encodeURIComponent(teks));
