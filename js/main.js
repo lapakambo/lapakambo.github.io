@@ -1,7 +1,7 @@
 // ===== KONFIGURASI LINK — ganti sesuai URL asli =====
 const LINKS = {
   "absen-web": "https://lapakabsensi.github.io/lapakabsensi/?c=akundemo",
-  "absen-apk": "downloads/Lapak-Absen.apk",
+  "absen-apk": "https://github.com/lapakabsensi/lapakabsensi/releases/download/apk-terbaru/Lapak-Absen.apk",
   "gudang-web": "https://lapakgudang.github.io/lapakgudang/",
   "whatsapp": "6282384691477"      // nomor WA format internasional tanpa + (0823-8469-1477)
 };
