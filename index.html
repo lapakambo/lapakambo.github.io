@@ -182,34 +182,21 @@
               <a href="#" class="btn" data-link="kosan-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Coba Gratis</a>
               <a href="#" class="btn btn--glass" data-link="kosan-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
             </div>
-            <span class="hero__note">Tampilan di samping masih berupa ilustrasi.</span>
+            <span class="hero__note">Mau coba? Klik Coba Gratis, lalu daftar. Gratis 1 bulan, maksimal 3 unit.</span>
           </div>
           <div class="hv" aria-hidden="true">
             <div class="stage">
-              <div class="hp hp--1 kos">
-                <div class="kos__screen">
-                  <div class="kos__top"><img src="assets/lapak-kosan.png?v=2" alt="" width="22" height="22"><b>Lapak Kosan</b><em>Nov</em></div>
-                  <div class="kos__sum"><small>Kamar terisi</small><strong>18<em>/20</em></strong><span class="kos__bar"><i></i></span></div>
-                  <div class="kos__h">Tagihan bulan ini</div>
-                  <ul class="kos__list">
-                    <li><span class="av">R</span><div><b>Kamar 01</b><small>Rina</small></div><em class="ok">Lunas</em></li>
-                    <li><span class="av">D</span><div><b>Kamar 02</b><small>Dimas</small></div><em class="wait">Menunggu</em></li>
-                    <li><span class="av">S</span><div><b>Kamar 03</b><small>Sari</small></div><em class="ok">Lunas</em></li>
-                    <li><span class="av">F</span><div><b>Kamar 04</b><small>Fajar</small></div><em class="ok">Lunas</em></li>
-                  </ul>
-                  <div class="kos__nav"><span class="on"><svg class="ic"><use href="#i-kosan"/></svg>Beranda</span><span><svg class="ic"><use href="#i-users"/></svg>Penghuni</span><span><svg class="ic"><use href="#i-wallet"/></svg>Tagihan</span></div>
-                </div>
+              <div class="win win--a">
+                <div class="win__bar"><i></i><i></i><i></i><span>lapak-kosan.github.io</span></div>
+                <img src="assets/screenshots/kosan-login.webp" alt="" width="1600" height="722" loading="lazy" decoding="async">
               </div>
-              <div class="mini mini--rev">
-                <small>Pendapatan Nov</small><strong>Rp 18,5 jt</strong>
-                <span class="mini__bars"><i style="height:38%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:72%"></i><i style="height:100%"></i></span>
+              <div class="win win--b">
+                <div class="win__bar"><i></i><i></i><i></i><span>Dashboard</span></div>
+                <img src="assets/screenshots/kosan-dashboard.webp" alt="" width="1600" height="725" loading="lazy" decoding="async">
               </div>
-              <div class="mini mini--ctr">
-                <span class="mini__ic"><svg class="ic"><use href="#i-check"/></svg></span>
-                <div><b>Kontrak Kamar 05</b><small>berakhir 12 hari lagi</small></div>
-              </div>
-              <span class="chip chip--tl"><svg class="ic"><use href="#i-users"/></svg>Penghuni &amp; Kontrak</span>
-              <span class="chip chip--br"><svg class="ic"><use href="#i-wallet"/></svg>Tagihan &amp; Utilitas</span>
+              <span class="chip chip--tr"><svg class="ic"><use href="#i-users"/></svg>Penghuni &amp; Kontrak</span>
+              <span class="chip chip--bl"><svg class="ic"><use href="#i-bolt"/></svg>Tagihan &amp; Utilitas</span>
+              <span class="chip chip--br"><svg class="ic"><use href="#i-growth"/></svg>Laporan Keuangan</span>
             </div>
           </div>
         </div>
@@ -334,9 +321,15 @@
     </div>
   </section>
 
-  <!-- ============ FITUR LAPAK ABSEN ============ -->
+  <!-- ============ FITUR PER PRODUK ============ -->
   <section class="section" id="fitur">
     <div class="container">
+      <div class="pswitch" role="tablist" aria-label="Pilih aplikasi untuk melihat fitur">
+        <button type="button" class="pstab is-active" role="tab" data-p="absen" aria-selected="true"><img src="assets/lapak-absen.png" alt="" width="26" height="26">Lapak Absen</button>
+        <button type="button" class="pstab" role="tab" data-p="gudang" aria-selected="false" tabindex="-1"><img src="assets/lapak-gudang.png" alt="" width="26" height="26">Lapak Gudang</button>
+        <button type="button" class="pstab" role="tab" data-p="kosan" aria-selected="false" tabindex="-1"><img src="assets/lapak-kosan.png?v=2" alt="" width="26" height="26">Lapak Kosan</button>
+      </div>
+      <div class="pp is-active" data-p="absen">
       <div class="section__head reveal">
         <span class="eyebrow">Lapak Absen</span>
         <h2>Absensi dan pengelolaan karyawan, <span>lebih mudah</span></h2>
@@ -349,6 +342,37 @@
         <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-wallet"/></svg></span><h3>Payroll</h3><p>Data kehadiran mendukung pengelolaan penggajian karyawan.</p></article>
         <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-devices"/></svg></span><h3>Web &amp; Android</h3><p>Gunakan lewat browser, atau pasang aplikasi APK di perangkat Android.</p></article>
         <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-users"/></svg></span><h3>Kelola Karyawan</h3><p>Data karyawan tersimpan rapi dan terpusat dalam satu tempat.</p></article>
+      </div>
+      </div>
+      <div class="pp" data-p="gudang">
+        <div class="section__head reveal">
+          <span class="eyebrow">Lapak Gudang</span>
+          <h2>ERP gudang dan bisnis, <span>lebih terkendali</span></h2>
+          <p>Satu aplikasi untuk mengelola stok, transaksi barang, dan laporan gudang, bisa dibuka langsung lewat browser.</p>
+        </div>
+        <div class="features-grid">
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-gudang"/></svg></span><h3>Manajemen Stok</h3><p>Pantau jumlah stok tiap barang, lengkap dengan daftar barang yang perlu restock.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-arrow"/></svg></span><h3>Barang Masuk &amp; Keluar</h3><p>Catat transaksi barang masuk dan keluar dengan rapi.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-pin"/></svg></span><h3>Pindah Gudang</h3><p>Pindahkan stok antar gudang dan lihat posisinya.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-shield"/></svg></span><h3>Garansi &amp; RMA</h3><p>Kelola klaim garansi dan retur barang dalam satu tempat.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-growth"/></svg></span><h3>Laporan Real-time</h3><p>Ringkasan dan laporan stok yang selalu terbarui.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-users"/></svg></span><h3>Multi-user</h3><p>Banyak pengguna dengan peran berbeda: Admin, Staf Gudang, dan Sales.</p></article>
+        </div>
+      </div>
+      <div class="pp" data-p="kosan">
+        <div class="section__head reveal">
+          <span class="eyebrow">Lapak Kosan</span>
+          <h2>Kelola kosan dan kontrakan, <span>tanpa pusing</span></h2>
+          <p>Satu aplikasi untuk mencatat penghuni, tagihan, listrik dan air, sampai laporan keuangan kos Anda, lewat web maupun aplikasi Android.</p>
+        </div>
+        <div class="features-grid">
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-kosan"/></svg></span><h3>Denah Kamar</h3><p>Kamar terisi dan kosong langsung kelihatan lewat denah.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-users"/></svg></span><h3>Penghuni &amp; Kontrak</h3><p>Data penghuni, booking, kontrak, dan deposit tersimpan rapi.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-bolt"/></svg></span><h3>Tagihan, Listrik &amp; Air</h3><p>Jatuh tempo, tagihan sewa, serta listrik dan air dihitung otomatis.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-whatsapp"/></svg></span><h3>Pengingat WhatsApp</h3><p>Kirim pengingat tagihan ke penghuni lewat WhatsApp.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-wallet"/></svg></span><h3>Laporan &amp; Kwitansi</h3><p>Pantau pemasukan dan pengeluaran, kwitansi PDF sekali klik.</p></article>
+        <article class="fcard reveal"><span class="fcard__ic"><svg class="ic"><use href="#i-devices"/></svg></span><h3>Web &amp; Android</h3><p>Gunakan lewat browser, atau pasang aplikasi APK di perangkat Android.</p></article>
+        </div>
       </div>
 
       <div class="shots" id="tampilan">
@@ -453,12 +477,21 @@
           <div class="info__text"><b>Harga</b><small>Tanyakan harga dan paket yang sesuai lewat WhatsApp.</small></div>
           <a href="#" class="btn btn--wa btn--sm" data-link="whatsapp" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Tanya Harga</a>
         </div>
-        <div class="info">
+        <div class="info pp is-active" data-p="absen">
           <span class="info__ic"><svg class="ic"><use href="#i-users"/></svg></span>
           <div class="info__text"><b>Karyawan tanpa batas</b><small>Tidak ada batas jumlah karyawan yang bisa dikelola.</small></div>
         </div>
+        <div class="info pp" data-p="gudang">
+          <span class="info__ic"><svg class="ic"><use href="#i-users"/></svg></span>
+          <div class="info__text"><b>Multi-user</b><small>Banyak pengguna dengan peran Admin, Staf Gudang, dan Sales.</small></div>
+        </div>
+        <div class="info pp" data-p="kosan">
+          <span class="info__ic"><svg class="ic"><use href="#i-check"/></svg></span>
+          <div class="info__text"><b>Coba gratis 1 bulan</b><small>Maksimal 3 unit, tanpa bayar, untuk kosan atau kontrakan.</small></div>
+        </div>
       </div>
 
+      <div class="pp is-active" data-p="absen">
       <div class="showcase reveal">
         <img src="assets/lapak-absen.png" alt="Logo Lapak Absen" width="140" height="140">
         <div class="showcase__text">
@@ -468,6 +501,35 @@
           <div class="showcase__actions">
             <a href="#" class="btn" data-link="absen-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
             <a href="#" class="btn btn--light" data-link="absen-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="pp" data-p="gudang">
+        <div class="showcase reveal">
+          <img src="assets/lapak-gudang.png" alt="Logo Lapak Gudang" width="140" height="140">
+          <div class="showcase__text">
+            <h3>Coba Lapak Gudang sekarang</h3>
+            <p>Buka versi web langsung dari browser di HP atau komputer.</p>
+            <p class="showcase__note">Mau coba dulu? Klik <b>Buka Versi Web</b>, lalu pilih akun demo: Admin, Staf Gudang, atau Sales.</p>
+            <div class="showcase__actions">
+              <a href="#" class="btn" data-link="gudang-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
+              <a href="#" class="btn btn--light" data-link="whatsapp-gudang" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Tanya Harga</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pp" data-p="kosan">
+        <div class="showcase reveal">
+          <img class="is-icon" src="assets/lapak-kosan.png?v=2" alt="Logo Lapak Kosan" width="140" height="140">
+          <div class="showcase__text">
+            <h3>Coba Lapak Kosan sekarang</h3>
+            <p>Buka versi web langsung dari browser, atau unduh aplikasinya untuk Android.</p>
+            <p class="showcase__note">Mau coba dulu? Klik <b>Buka Versi Web</b>, lalu daftar. Coba gratis 1 bulan, maksimal 3 unit, tanpa bayar.</p>
+            <div class="showcase__actions">
+              <a href="#" class="btn" data-link="kosan-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
+              <a href="#" class="btn btn--light" data-link="kosan-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
+            </div>
           </div>
         </div>
       </div>
@@ -481,17 +543,32 @@
         <span class="eyebrow">Cara Memulai</span>
         <h2>Mulai dalam <span>3 langkah</span></h2>
       </div>
-      <ol class="steps">
+      <div class="pswitch" role="tablist" aria-label="Pilih aplikasi untuk melihat cara memulai">
+        <button type="button" class="pstab is-active" role="tab" data-p="absen" aria-selected="true"><img src="assets/lapak-absen.png" alt="" width="26" height="26">Lapak Absen</button>
+        <button type="button" class="pstab" role="tab" data-p="gudang" aria-selected="false" tabindex="-1"><img src="assets/lapak-gudang.png" alt="" width="26" height="26">Lapak Gudang</button>
+        <button type="button" class="pstab" role="tab" data-p="kosan" aria-selected="false" tabindex="-1"><img src="assets/lapak-kosan.png?v=2" alt="" width="26" height="26">Lapak Kosan</button>
+      </div>
+      <ol class="steps pp is-active" data-p="absen">
         <li class="step reveal"><span class="step__no">01</span><h3>Pilih versi</h3><p>Buka versi web, atau unduh aplikasi APK untuk Android.</p></li>
         <li class="step reveal"><span class="step__no">02</span><h3>Masuk &amp; siapkan data</h3><p>Login, lalu atur data karyawan sesuai kebutuhan usaha Anda.</p></li>
         <li class="step reveal"><span class="step__no">03</span><h3>Mulai absensi</h3><p>Karyawan absen lewat HP dengan face recognition dan GPS.</p></li>
       </ol>
+      <ol class="steps pp" data-p="gudang">
+        <li class="step reveal"><span class="step__no">01</span><h3>Buka versi web</h3><p>Buka Lapak Gudang lewat browser di HP atau komputer.</p></li>
+        <li class="step reveal"><span class="step__no">02</span><h3>Masuk &amp; siapkan data</h3><p>Login, lalu isi data barang dan gudang sesuai kebutuhan usaha Anda.</p></li>
+        <li class="step reveal"><span class="step__no">03</span><h3>Mulai kelola stok</h3><p>Catat barang masuk dan keluar, lalu pantau stok dan laporannya.</p></li>
+      </ol>
+      <ol class="steps pp" data-p="kosan">
+        <li class="step reveal"><span class="step__no">01</span><h3>Daftar &amp; coba gratis</h3><p>Buka versi web atau unduh aplikasi APK, lalu daftar untuk coba gratis 1 bulan.</p></li>
+        <li class="step reveal"><span class="step__no">02</span><h3>Siapkan data kos</h3><p>Atur data kos, kamar, dan penghuni sesuai kebutuhan Anda.</p></li>
+        <li class="step reveal"><span class="step__no">03</span><h3>Mulai kelola kos</h3><p>Catat tagihan, listrik dan air, lalu pantau laporan keuangan kos.</p></li>
+      </ol>
 
-      <div class="guide" id="panduan-apk">
+      <div class="guide pp is-active" id="panduan-apk" data-p="absen kosan">
         <div class="section__head section__head--sub reveal">
           <span class="eyebrow">Panduan</span>
           <h2>Cara pasang <span>aplikasi Android</span></h2>
-          <p>Aplikasi dipasang langsung dari file APK, bukan lewat Play Store, jadi HP akan menampilkan beberapa peringatan standar. Itu normal untuk semua aplikasi di luar Play Store. Tampilan layar bisa sedikit berbeda di tiap merek HP.</p>
+          <p>Berlaku untuk Lapak Absen dan Lapak Kosan. Aplikasi dipasang langsung dari file APK, bukan lewat Play Store, jadi HP akan menampilkan beberapa peringatan standar. Itu normal untuk semua aplikasi di luar Play Store. Tampilan layar bisa sedikit berbeda di tiap merek HP.</p>
         </div>
         <ol class="steps steps--4">
           <li class="step reveal"><span class="step__no">01</span><h3>Unduh file APK</h3><p>Ketuk <b>Download APK</b>. Jika browser bertanya apakah file ingin tetap disimpan, pilih <b>Tetap unduh</b>.</p>
@@ -501,7 +578,7 @@
           <li class="step reveal"><span class="step__no">03</span><h3>Izinkan pemasangan</h3><p>Jika muncul peringatan sumber tidak dikenal, ketuk <b>Setelan</b>, lalu aktifkan <b>Izinkan dari sumber ini</b> untuk aplikasi yang Anda pakai mengunduh.</p>
             <figure class="step__shot"><img src="assets/panduan/apk-3.png" alt="Layar izin pemasangan dari sumber tidak dikenal" loading="lazy" onerror="this.parentElement.hidden=true"></figure></li>
           <li class="step reveal"><span class="step__no">04</span><h3>Pasang &amp; buka</h3><p>Ketuk <b>Instal</b>. Jika Google Play Protect menampilkan peringatan, pilih <b>Detail</b> lalu <b>Tetap instal</b>. Setelah selesai, ketuk <b>Buka</b>.</p>
-            <figure class="step__shot"><img src="assets/panduan/apk-4.png" alt="Layar instal aplikasi Lapak Absen" loading="lazy" onerror="this.parentElement.hidden=true"></figure></li>
+            <figure class="step__shot"><img src="assets/panduan/apk-4.png" alt="Layar instal aplikasi" loading="lazy" onerror="this.parentElement.hidden=true"></figure></li>
         </ol>
         <p class="guide__note reveal">Unduh APK hanya dari situs resmi ini. Butuh bantuan saat memasang? <a href="#kontak">Hubungi kami lewat WhatsApp</a>.</p>
       </div>

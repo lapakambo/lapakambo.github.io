@@ -99,6 +99,53 @@ if ("IntersectionObserver" in window) {
   });
 })();
 
+// Pilihan produk (Absen / Gudang / Kosan) untuk Fitur, Cara Memulai, dan galeri: satu pilihan, semuanya ikut berganti
+(() => {
+  const bars = [...document.querySelectorAll(".pswitch")];
+  const panels = [...document.querySelectorAll(".pp")];
+  if (!bars.length) return;
+  const gallery = [...document.querySelectorAll(".stab")];
+  const set = (p, focus) => {
+    bars.forEach(bar => bar.querySelectorAll(".pstab").forEach(t => {
+      const on = t.dataset.p === p;
+      t.classList.toggle("is-active", on);
+      t.setAttribute("aria-selected", on);
+      t.tabIndex = on ? 0 : -1;
+      if (on && focus === bar) t.focus();
+    }));
+    panels.forEach(el => {
+      const on = el.dataset.p.split(" ").includes(p);
+      el.classList.toggle("is-active", on);
+      // elemen .reveal yang tadinya tersembunyi tidak pernah terpantau observer, tampilkan langsung
+      if (on) el.querySelectorAll(".reveal").forEach(x => x.classList.add("in"));
+    });
+  };
+  const order = ["absen", "gudang", "kosan"];
+  bars.forEach(bar => {
+    const tabs = [...bar.querySelectorAll(".pstab")];
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => {
+        set(t.dataset.p);
+        const g = document.getElementById("tab-" + t.dataset.p);   // galeri ikut berganti
+        if (g && !g.classList.contains("is-active")) g.click();
+      });
+      t.addEventListener("keydown", e => {
+        if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+          e.preventDefault();
+          const next = tabs[(i + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length];
+          next.click();
+          next.focus();
+        }
+      });
+    });
+  });
+  // kebalikannya: ganti tab di galeri, bagian lain ikut
+  gallery.forEach(g => g.addEventListener("click", () => {
+    const p = g.id.replace("tab-", "");
+    if (order.includes(p)) set(p);
+  }));
+})();
+
 // Hero slider: ganti slide otomatis (Platform, Absen, Gudang, Kosan). Waktu tiap slide diatur oleh animasi
 // bar progres di tab (CSS), jadi pause/resume otomatis sinkron. Berhenti saat di-hover, difokus, disentuh,
 // tab tidak aktif, atau hero di luar layar. Bisa di-swipe, panah, dan tab. Tidak otomatis kalau reduced-motion.
