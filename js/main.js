@@ -4,6 +4,7 @@ const LINKS = {
   "absen-apk": "https://github.com/lapakabsensi/lapakabsensi/releases/download/apk-terbaru/Lapak-Absen.apk",
   "gudang-web": "https://lapakgudang.github.io/lapakgudang/",
   "kosan-web": "https://lapak-kosan.github.io/lapak-kosan/",
+  "kosan-apk": "https://github.com/lapak-kosan/lapak-kosan/releases/download/apk-terbaru/Lapak-Kosan.apk",
   "whatsapp": "6282384691477"      // nomor WA format internasional tanpa + (0823-8469-1477)
 };
 
