@@ -332,6 +332,7 @@ html:not(.js) .hslide:not(.is-active){display:none}
 .footer__cta{font-size:clamp(17px,2.4vw,24px);font-weight:500}
 .footer__cta span{color:#FB923C;font-weight:700}
 .footer__meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:center;font-size:13px;color:#9FB0D3}
+.footer__meta strong{color:#FDBA74;font-weight:600}
 
 /* Kontak WhatsApp */
 .btn--wa{background:linear-gradient(180deg,#2FD86B,#16A34A);box-shadow:0 8px 18px rgba(22,163,74,.35)}
