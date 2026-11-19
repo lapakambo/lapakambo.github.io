@@ -11,7 +11,7 @@ const LINKS = {
 // ===== ANALYTICS (GoatCounter, tanpa cookie) =====
 // Daftar gratis di goatcounter.com, lalu isi kode situs di bawah (misal "lapakambo" untuk lapakambo.goatcounter.com).
 // Selama kosong, tidak ada skrip analytics yang dimuat.
-const ANALYTICS = { goatcounter: "" };
+const ANALYTICS = { goatcounter: "lapakambo" };
 
 document.querySelectorAll("[data-link]").forEach(a => {
   const url = LINKS[a.dataset.link];
