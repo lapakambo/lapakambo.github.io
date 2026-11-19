@@ -21,4 +21,6 @@ Buka `index.html` di browser, atau: `python3 -m http.server 8000`
 ## Yang perlu diganti
 - `js/main.js` → URL Lapak Absen (web) dan APK
 - `index.html` → email/kontak di footer
+- `js/main.js` → `ANALYTICS.goatcounter`: isi kode situs GoatCounter (tanpa cookie) untuk menghitung kunjungan dan klik tombol
+- `assets/og-image.png` → gambar preview saat link dibagikan (1200x630); kalau diganti, naikkan `?v=` di meta og:image
 - Icon: edit `<symbol>` di sprite bagian atas `index.html`

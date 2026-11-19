@@ -8,6 +8,11 @@ const LINKS = {
   "whatsapp": "6282384691477"      // nomor WA format internasional tanpa + (0823-8469-1477)
 };
 
+// ===== ANALYTICS (GoatCounter, tanpa cookie) =====
+// Daftar gratis di goatcounter.com, lalu isi kode situs di bawah (misal "lapakambo" untuk lapakambo.goatcounter.com).
+// Selama kosong, tidak ada skrip analytics yang dimuat.
+const ANALYTICS = { goatcounter: "" };
+
 document.querySelectorAll("[data-link]").forEach(a => {
   const url = LINKS[a.dataset.link];
   if (url && url !== "#") a.href = url;
@@ -280,4 +285,26 @@ document.querySelectorAll("[data-pick]").forEach(a => a.addEventListener("click"
   }
   mark(0);
   start();
+})();
+
+// Analytics: pageview + hitungan klik tombol penting (WhatsApp, buka web, APK, paket harga). Aktif hanya kalau kode diisi.
+(() => {
+  const code = (ANALYTICS.goatcounter || "").trim();
+  if (!code) return;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://gc.zgo.at/count.js";
+  s.dataset.goatcounter = "https://" + code + ".goatcounter.com/count";
+  document.head.appendChild(s);
+
+  const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a[data-link]");
+    if (!a || !window.goatcounter || !goatcounter.count) return;
+    const card = a.closest(".pcard");
+    const name = card
+      ? "harga/" + (card.closest(".pp") || {dataset: {}}).dataset.p + "/" + slug(card.querySelector(".pcard__name").textContent)
+      : "klik/" + a.dataset.link;
+    goatcounter.count({ path: name, title: name, event: true });
+  });
 })();
