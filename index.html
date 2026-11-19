@@ -77,6 +77,7 @@
       <a href="#tentang">Tentang Kami</a>
       <a href="#produk">Produk</a>
       <a href="#fitur">Fitur</a>
+      <a href="#harga">Harga</a>
       <a href="#bantuan">Bantuan</a>
       <a href="#produk" class="btn btn--sm menu__cta">Coba Sekarang</a>
     </nav>
@@ -272,7 +273,7 @@
             <li><svg class="ic"><use href="#i-check"/></svg>GPS Maps</li>
             <li><svg class="ic"><use href="#i-check"/></svg>Payroll</li>
           </ul>
-          <p class="card__note">Karyawan tanpa batas. Harga via <a href="#harga">WhatsApp</a>. Mau coba? Klik <b>Buka Versi Web</b>, lalu pilih akun demo di halaman login. Mau coba pakai APK? Masukkan kode perusahaan: <b>akundemo</b></p>
+          <p class="card__note">Karyawan tanpa batas. Mulai Rp 3.500 per karyawan, <a href="#harga" data-pick="absen">lihat harga</a>. Mau coba? Klik <b>Buka Versi Web</b>, lalu pilih akun demo di halaman login. Mau coba pakai APK? Masukkan kode perusahaan: <b>akundemo</b></p>
           <div class="card__actions">
             <a href="#" class="btn" data-link="absen-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
             <a href="#" class="btn btn--dark" data-link="absen-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
@@ -291,7 +292,7 @@
             <li><svg class="ic"><use href="#i-check"/></svg>Laporan real-time</li>
             <li><svg class="ic"><use href="#i-check"/></svg>Multi-user</li>
           </ul>
-          <p class="card__note">Harga via <a href="#" data-link="whatsapp-gudang" target="_blank" rel="noopener">WhatsApp</a>. Mau coba? Klik <b>Buka Versi Web</b>, lalu pilih akun demo (Admin, Staf Gudang, atau Sales).</p>
+          <p class="card__note">Harga dan fitur via <a href="#harga" data-pick="gudang">konsultasi WhatsApp</a>. Mau coba? Klik <b>Buka Versi Web</b>, lalu pilih akun demo (Admin, Staf Gudang, atau Sales).</p>
           <div class="card__actions">
             <a href="#" class="btn" data-link="gudang-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
             <a href="#" class="btn btn--wa" data-link="whatsapp-gudang" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Tanya Harga</a>
@@ -310,7 +311,7 @@
             <li><svg class="ic"><use href="#i-check"/></svg>Laporan keuangan &amp; kwitansi</li>
             <li><svg class="ic"><use href="#i-check"/></svg>Akses dari HP</li>
           </ul>
-          <p class="card__note">Harga via <a href="#" data-link="whatsapp-kosan" target="_blank" rel="noopener">WhatsApp</a>. Mau coba? Klik <b>Buka Versi Web</b>, lalu daftar. Coba gratis 1 bulan, maksimal 3 unit, tanpa bayar. Bisa lewat web atau aplikasi Android (APK).</p>
+          <p class="card__note"><a href="#harga" data-pick="kosan">Lihat paket harga</a>. Mau coba? Klik <b>Buka Versi Web</b>, lalu daftar. Coba gratis 1 bulan, maksimal 3 unit, tanpa bayar. Bisa lewat web atau aplikasi Android (APK).</p>
           <div class="card__actions">
             <a href="#" class="btn" data-link="kosan-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Buka Versi Web</a>
             <a href="#" class="btn btn--dark" data-link="kosan-apk" download><svg class="ic"><use href="#i-android"/></svg>Download APK</a>
@@ -471,10 +472,10 @@
         </div>
       </div>
 
-      <div class="infostrip reveal" id="harga">
+      <div class="infostrip reveal">
         <div class="info">
           <span class="info__ic"><svg class="ic"><use href="#i-wallet"/></svg></span>
-          <div class="info__text"><b>Harga</b><small>Tanyakan harga dan paket yang sesuai lewat WhatsApp.</small></div>
+          <div class="info__text"><b>Harga</b><small>Lihat <a href="#harga">paket harga</a>, atau tanyakan lewat WhatsApp.</small></div>
           <a href="#" class="btn btn--wa btn--sm" data-link="whatsapp" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Tanya Harga</a>
         </div>
         <div class="info pp is-active" data-p="absen">
@@ -536,8 +537,62 @@
     </div>
   </section>
 
+  <!-- ============ HARGA ============ -->
+  <section class="section section--soft" id="harga">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Harga</span>
+        <h2>Harga yang <span>jelas</span>, tanpa ribet</h2>
+        <p>Pilih aplikasi, lalu lihat paket yang cocok untuk usaha Anda.</p>
+      </div>
+      <div class="pswitch" role="tablist" aria-label="Pilih aplikasi untuk melihat harga">
+        <button type="button" class="pstab is-active" role="tab" data-p="absen" aria-selected="true"><img src="assets/lapak-absen.png" alt="" width="26" height="26">Lapak Absen</button>
+        <button type="button" class="pstab" role="tab" data-p="gudang" aria-selected="false" tabindex="-1"><img src="assets/lapak-gudang.png" alt="" width="26" height="26">Lapak Gudang</button>
+        <button type="button" class="pstab" role="tab" data-p="kosan" aria-selected="false" tabindex="-1"><img src="assets/lapak-kosan.png?v=3" alt="" width="26" height="26">Lapak Kosan</button>
+      </div>
+
+      <div class="pp is-active" data-p="absen">
+        <div class="section__head section__head--sub reveal">
+          <span class="eyebrow">Lapak Absen</span>
+          <h2>Bayar sesuai <span>jumlah karyawan</span></h2>
+          <p>Berlangganan per karyawan setiap bulan. Untuk kebutuhan enterprise tanpa berlangganan, konsultasikan harganya lewat WhatsApp.</p>
+        </div>
+        <div class="pgrid pgrid--auto">
+          <article class="pcard reveal pcard--hot"><h3 class="pcard__name">Berlangganan</h3><p class="pcard__price"><b>Rp 3.500</b><small>/ karyawan / bulan</small></p><p class="pcard__cap">Bayar sesuai jumlah karyawan</p><ul class="checks"><li><svg class="ic"><use href="#i-check"/></svg>Absensi via HP dengan Face Recognition</li><li><svg class="ic"><use href="#i-check"/></svg>GPS Maps dan Payroll</li><li><svg class="ic"><use href="#i-check"/></svg>Karyawan tanpa batas</li></ul><div class="pcard__actions"><a href="#" class="btn btn--wa" data-link="whatsapp-absen" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Pesan via WhatsApp</a></div></article>
+          <article class="pcard reveal"><h3 class="pcard__name">Enterprise</h3><p class="pcard__price"><b>Konsultasi</b></p><p class="pcard__cap">Tanpa berlangganan</p><ul class="checks"><li><svg class="ic"><use href="#i-check"/></svg>Tidak berlangganan bulanan</li><li><svg class="ic"><use href="#i-check"/></svg>Harga dikonsultasikan dulu</li><li><svg class="ic"><use href="#i-check"/></svg>Hubungi kami lewat WhatsApp</li></ul><div class="pcard__actions"><a href="#" class="btn btn--wa btn--ghost-wa" data-link="whatsapp-absen-enterprise" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Konsultasi Harga</a></div></article>
+        </div>
+      </div>
+
+      <div class="pp" data-p="gudang">
+        <div class="section__head section__head--sub reveal">
+          <span class="eyebrow">Lapak Gudang</span>
+          <h2>Harga lewat <span>konsultasi</span></h2>
+          <p>Lapak Gudang untuk kebutuhan enterprise. Harga dan fitur disesuaikan lewat konsultasi di WhatsApp.</p>
+        </div>
+        <div class="pgrid pgrid--auto">
+          <article class="pcard reveal pcard--hot"><h3 class="pcard__name">Enterprise</h3><p class="pcard__price"><b>Konsultasi</b></p><p class="pcard__cap">Harga dan fitur via WhatsApp</p><ul class="checks"><li><svg class="ic"><use href="#i-check"/></svg>Multi-user: Admin, Staf Gudang, Sales</li><li><svg class="ic"><use href="#i-check"/></svg>Fitur disesuaikan lewat konsultasi</li><li><svg class="ic"><use href="#i-check"/></svg>Bisa coba akun demo dulu</li></ul><div class="pcard__actions"><a href="#" class="btn btn--wa" data-link="whatsapp-gudang-konsul" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg>Konsultasi via WhatsApp</a><a href="#" class="btn btn--ghost" data-link="gudang-web" target="_blank" rel="noopener"><svg class="ic"><use href="#i-globe"/></svg>Coba Versi Demo</a></div></article>
+        </div>
+      </div>
+
+      <div class="pp" data-p="kosan">
+        <div class="section__head section__head--sub reveal">
+          <span class="eyebrow">Lapak Kosan</span>
+          <h2>Mulai gratis, <span>lanjut kalau cocok</span></h2>
+          <p>Free trial 1 bulan dulu. Tidak ada kewajiban lanjut.</p>
+        </div>
+        <div class="pgrid">
+          <article class="pcard reveal pcard--hot"><span class="pcard__tag">Paling mudah mulai</span><h3 class="pcard__name">Free Trial</h3><p class="pcard__price"><b>Rp 0</b><small>/ 1 bulan</small></p><p class="pcard__cap">Maksimal 3 unit</p><ul class="checks"><li><svg class="ic"><use href="#i-check"/></svg>Semua fitur aplikasi</li><li><svg class="ic"><use href="#i-check"/></svg>Kosan, kontrakan, atau keduanya</li><li><svg class="ic"><use href="#i-check"/></svg>Tanpa bayar selama trial</li></ul><div class="pcard__actions"><a href="#" class="btn" data-link="kosan-web" target="_blank" rel="noopener">Coba gratis</a></div></article>
+          <article class="pcard reveal"><h3 class="pcard__name">Paket Sasetan</h3><p class="pcard__price"><b>Rp 99.000</b><small>/ bulan</small></p><p class="pcard__cap">1–10 unit</p><ul class="checks"><li><svg class="ic"><use href="#i-check"/></svg>Semua fitur aplikasi</li><li><svg class="ic"><use href="#i-check"/></svg>Kamar kosan dan kontrakan</li><li><svg class="ic"><use href="#i-check"/></svg>Verifikasi dan aktivasi oleh admin</li></ul><div class="pcard__actions"><a href="#" class="btn btn--ghost" data-link="kosan-web" target="_blank" rel="noopener">Pilih paket</a></div></article>
+          <article class="pcard reveal"><h3 class="pcard__name">Paket Porsi Pas</h3><p class="pcard__price"><b>Rp 199.000</b><small>/ bulan</small></p><p class="pcard__cap">1–25 unit</p><ul class="checks"><li><svg class="ic"><use href="#i-check"/></svg>Semua fitur aplikasi</li><li><svg class="ic"><use href="#i-check"/></svg>Kamar kosan dan kontrakan</li><li><svg class="ic"><use href="#i-check"/></svg>Verifikasi dan aktivasi oleh admin</li></ul><div class="pcard__actions"><a href="#" class="btn btn--ghost" data-link="kosan-web" target="_blank" rel="noopener">Pilih paket</a></div></article>
+          <article class="pcard reveal"><h3 class="pcard__name">Paket Gaban</h3><p class="pcard__price"><b>Rp 299.000</b><small>/ bulan</small></p><p class="pcard__cap">1–60 unit</p><ul class="checks"><li><svg class="ic"><use href="#i-check"/></svg>Semua fitur aplikasi</li><li><svg class="ic"><use href="#i-check"/></svg>Kamar kosan dan kontrakan</li><li><svg class="ic"><use href="#i-check"/></svg>Verifikasi dan aktivasi oleh admin</li></ul><div class="pcard__actions"><a href="#" class="btn btn--ghost" data-link="kosan-web" target="_blank" rel="noopener">Pilih paket</a></div></article>
+          <article class="pcard reveal"><h3 class="pcard__name">Paket Megalodon</h3><p class="pcard__price"><b>Rp 399.000</b><small>/ bulan</small></p><p class="pcard__cap">1–100 unit</p><ul class="checks"><li><svg class="ic"><use href="#i-check"/></svg>Semua fitur aplikasi</li><li><svg class="ic"><use href="#i-check"/></svg>Kamar kosan dan kontrakan</li><li><svg class="ic"><use href="#i-check"/></svg>Verifikasi dan aktivasi oleh admin</li></ul><div class="pcard__actions"><a href="#" class="btn btn--ghost" data-link="kosan-web" target="_blank" rel="noopener">Pilih paket</a></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CARA MEMULAI ============ -->
-  <section class="section section--soft" id="cara-kerja">
+  <section class="section" id="cara-kerja">
     <div class="container">
       <div class="section__head reveal">
         <span class="eyebrow">Cara Memulai</span>
@@ -586,7 +641,7 @@
   </section>
 
   <!-- ============ FAQ ============ -->
-  <section class="section" id="bantuan">
+  <section class="section section--soft" id="bantuan">
     <div class="container faqwrap">
       <div class="faqwrap__intro reveal">
         <span class="eyebrow eyebrow--left">Bantuan</span>
@@ -596,20 +651,20 @@
       <div class="faq reveal">
         <details open><summary>Apa itu LAPAK AMBO?<svg class="ic"><use href="#i-chev"/></svg></summary><p>LAPAK AMBO adalah platform yang menghadirkan berbagai aplikasi bisnis dalam satu tempat, mulai dari absensi karyawan dan ERP gudang, hingga pengelolaan kos lewat Lapak Kosan.</p></details>
         <details><summary>Lapak Absen bisa dipakai lewat apa?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Lapak Absen tersedia dalam versi web yang bisa dibuka lewat browser, dan dalam bentuk aplikasi APK untuk perangkat Android.</p></details>
-        <details><summary>Berapa harga Lapak Absen?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Untuk informasi harga dan paket, silakan hubungi kami lewat WhatsApp di 0823-8469-1477. Kami akan bantu sesuai kebutuhan usaha Anda.</p></details>
+        <details><summary>Berapa harga Lapak Absen?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Lapak Absen Rp 3.500 per karyawan per bulan. Untuk enterprise tanpa berlangganan, konsultasikan harganya lewat WhatsApp di 0823-8469-1477. <a href="#harga" data-pick="absen">Lihat detail harga</a>.</p></details>
         <details><summary>Berapa karyawan yang bisa dikelola?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Tidak ada batas jumlah karyawan di Lapak Absen, jadi bisa dipakai usaha kecil maupun yang karyawannya banyak.</p></details>
         <details><summary>Bagaimana cara memasang aplikasi APK?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Unduh file lewat tombol Download APK, buka file tersebut di HP Android, izinkan pemasangan dari sumber tidak dikenal jika diminta, lalu ikuti proses instalasi. Langkah lengkapnya ada di <a href="#panduan-apk">panduan pasang aplikasi</a>.</p></details>
         <details><summary>Bagaimana cara mencoba Lapak Absen?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Klik tombol Buka Versi Web di kartu Lapak Absen, lalu pilih salah satu akun demo di halaman login. Akun demo berisi data contoh, jadi Anda bisa mencoba semua fitur tanpa menyentuh data asli.</p></details>
         <details><summary>Bagaimana cara mencoba Lapak Gudang?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Klik tombol Buka Versi Web di kartu Lapak Gudang, lalu pilih salah satu akun demo di halaman login: Admin, Staf Gudang, atau Sales. Akun demo berisi data contoh, tidak mengubah data asli, dan datanya hilang saat Anda keluar.</p></details>
-        <details><summary>Berapa harga Lapak Gudang?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Untuk informasi harga dan paket Lapak Gudang, silakan hubungi kami lewat WhatsApp di 0823-8469-1477.</p></details>
+        <details><summary>Berapa harga Lapak Gudang?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Lapak Gudang untuk kebutuhan enterprise. Harga dan fitur dikonsultasikan lewat WhatsApp di 0823-8469-1477.</p></details>
         <details><summary>Bagaimana cara mencoba Lapak Kosan?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Klik tombol Buka Versi Web di kartu Lapak Kosan, lalu daftar di halaman yang muncul. Anda bisa coba gratis 1 bulan untuk maksimal 3 unit, tanpa bayar, untuk kosan, kontrakan, atau keduanya.</p></details>
-        <details><summary>Berapa harga Lapak Kosan?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Untuk informasi harga dan paket Lapak Kosan, silakan hubungi kami lewat WhatsApp di 0823-8469-1477.</p></details>
+        <details><summary>Berapa harga Lapak Kosan?<svg class="ic"><use href="#i-chev"/></svg></summary><p>Lapak Kosan gratis dicoba 1 bulan (maksimal 3 unit). Setelahnya mulai Rp 99.000 per bulan, tergantung jumlah unit. <a href="#harga" data-pick="kosan">Lihat semua paket</a>.</p></details>
       </div>
     </div>
   </section>
 
   <!-- ============ KONTAK ============ -->
-  <section class="section section--soft" id="kontak">
+  <section class="section" id="kontak">
     <div class="container">
       <div class="contactbox reveal">
         <span class="contactbox__ic"><svg class="ic"><use href="#i-whatsapp"/></svg></span>
@@ -717,6 +772,7 @@
         <li><a href="#top">Beranda</a></li>
         <li><a href="#tentang">Tentang Kami</a></li>
         <li><a href="#produk">Produk</a></li>
+        <li><a href="#harga">Harga</a></li>
         <li><a href="#bantuan">Bantuan</a></li>
       </ul>
     </div>

@@ -41,7 +41,10 @@ if (LINKS.whatsapp) {
   const pesan = {
     "whatsapp": "Halo LAPAK AMBO, saya ingin konsultasi dan pemesanan.",
     "whatsapp-gudang": "Halo LAPAK AMBO, saya ingin tanya harga Lapak Gudang.",
-    "whatsapp-kosan": "Halo LAPAK AMBO, saya ingin tanya harga Lapak Kosan."
+    "whatsapp-kosan": "Halo LAPAK AMBO, saya ingin tanya harga Lapak Kosan.",
+    "whatsapp-absen": "Halo LAPAK AMBO, saya ingin berlangganan Lapak Absen (Rp 3.500 per karyawan per bulan).",
+    "whatsapp-absen-enterprise": "Halo LAPAK AMBO, saya ingin konsultasi harga Lapak Absen untuk enterprise (tanpa berlangganan).",
+    "whatsapp-gudang-konsul": "Halo LAPAK AMBO, saya ingin konsultasi harga dan fitur Lapak Gudang."
   };
   Object.entries(pesan).forEach(([key, teks]) => {
     document.querySelectorAll('[data-link="' + key + '"]').forEach(a => a.href = "https://wa.me/" + wa + "?text=" + encodeURIComponent(teks));
@@ -145,6 +148,12 @@ if ("IntersectionObserver" in window) {
     if (order.includes(p)) set(p);
   }));
 })();
+
+// Link "lihat harga" di kartu produk: pilih tab produk yang sesuai di bagian Harga sebelum scroll
+document.querySelectorAll("[data-pick]").forEach(a => a.addEventListener("click", () => {
+  const t = document.querySelector('#harga .pstab[data-p="' + a.dataset.pick + '"]');
+  if (t && !t.classList.contains("is-active")) t.click();
+}));
 
 // Hero slider: ganti slide otomatis (Platform, Absen, Gudang, Kosan). Waktu tiap slide diatur oleh animasi
 // bar progres di tab (CSS), jadi pause/resume otomatis sinkron. Berhenti saat di-hover, difokus, disentuh,
